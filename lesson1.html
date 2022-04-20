@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>    <title>Document</title>
+    </head>
+
+    <!--ASYNCHRONOUS LEARNING EXERCISE-->
+    <body>
+
+        <!--1. Create an image and set the following attributes with Vue {src, alt, title}-->
+        <div id="app">
+            <img v-bind:src="image" alt="A gray cat posing" title="cat portrait" width="500px">
+            <br><br>
+
+        <!--2. Augment the span below to include another class called "highlight", which has a yellow border.
+-->   
+            <span v-bind:class="highlight">
+                look at me!
+            </span>
+        </div>
+        
+
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data(){
+                return{
+                image: './images/cat_photo.jpeg',
+                highlight: 'loadClass',
+                }
+            }
+        });
+    </script>
+
+    <style>
+        .loadClass{
+            border: 5px solid yellow
+        }
+    </style>
+    </body>
+</html>
